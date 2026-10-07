@@ -1,0 +1,47 @@
+# Git
+.git
+.gitignore
+
+# Secrets / configuration locale
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+logs/
+
+# OS / éditeurs
+.DS_Store
+.vscode/
+.idea/
+
+# Docker temporaires / overrides locaux
+.dockerignore.bak
+docker-compose.override.yml
+
+# Fichiers temporaires
+*.tmp
+*.swp

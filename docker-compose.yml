@@ -1,0 +1,28 @@
+services:
+  mcp-client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ai-agent-toolmcp:latest
+    container_name: ai-agent-toolmcp-client
+    env_file:
+      - .env
+    environment:
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+    stdin_open: true
+    tty: true
+    command: ["python", "client.py"]
+
+  mcp-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ai-agent-toolmcp:latest
+    container_name: ai-agent-toolmcp-agent
+    env_file:
+      - .env
+    environment:
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+    command: ["python", "agent.py"]
+    profiles:
+      - agent

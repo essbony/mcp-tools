@@ -1,0 +1,24 @@
+[project]
+name = "ai-agent-toolmcp"
+version = "0.1.0"
+description = "Projet de démonstration MCP avec serveur d'inventaire local, client OpenAI Responses et agent MCP hébergé."
+readme = "README.md"
+authors = [
+    { name = "bony", email = "essbony@outlook.fr" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastmcp",
+    "mcp",
+    "openai<3",
+    "openai-agents",
+    "python-dotenv",
+    "uvicorn",
+]
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["agent", "client", "configs", "prompts", "server"]
